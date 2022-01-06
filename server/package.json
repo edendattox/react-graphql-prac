@@ -1,19 +1,24 @@
 {
   "name": "react-tiny",
   "version": "0.1.0",
+  "scripts": {
+    "start": "nodemon src/index.ts",
+    "build": "tsc -p ./",
+    "seed": "ts-node temp/seed.ts"
+  },
   "dependencies": {
     "@graphql-tools/utils": "^8.6.0",
     "apollo-server-express": "^3.6.1",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "graphql": "^16.2.0"
-  },
-  "scripts": {
-    "start": "nodemon src/index.ts",
-    "build": "tsc -p ./"
+    "graphql": "^16.2.0",
+    "lodash.merge": "^4.6.2",
+    "mongodb": "^4.2.2"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/graphql": "^14.5.0",
+    "@types/lodash.merge": "^4.6.6",
     "@types/node": "^17.0.7",
     "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.9.0",
