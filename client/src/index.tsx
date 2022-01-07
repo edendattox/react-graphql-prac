@@ -1,13 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import reportWebVitals from './reportWebVitals';
-import { Listings } from './sections';
+import React from "react";
+import ReactDOM from "react-dom";
+import { ApolloProvider } from "@apollo/client";
+import { apolloClient } from "./apollo/ApolloClient";
+import reportWebVitals from "./reportWebVitals";
+import { Listings } from "./sections";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Listings title={"TinyHouse Listings"} />
+    <ApolloProvider client={apolloClient}>
+      <Listings title={"TinyHouse Listings"} />
+    </ApolloProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
